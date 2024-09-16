@@ -1,9 +1,11 @@
 import React from "react";
 import { Navigation } from "../components/Navigation";
+import { Logo } from "../components/Logo";
 
 export const About: React.FC = () => {
   return (
     <div>
+      <Logo />
       <Navigation />
       <h2>About</h2>
       <br />
