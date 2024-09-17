@@ -1,5 +1,15 @@
 export interface ICountries {
-  name: {
-    common: string;
+  translations: {
+    fra: {
+      common: string;
+    };
+  };
+
+  capital: string;
+
+  population: string;
+
+  flags: {
+    svg: string;
   };
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ICountries } from "../models/ICountries";
 import { CountriesServices } from "../services/CountriesServices";
 import { AxiosResponse } from "axios";
+import { Card } from "./Card";
 
 interface IState {
   countries: ICountries[];
@@ -23,7 +24,7 @@ export const Countries: React.FC = () => {
       <h1>Countries</h1>
       <ul>
         {data.countries.map((country, index) => (
-          <li key={index}> {country.name.common} </li>
+          <Card key={index} country={country} />
         ))}
       </ul>
     </div>
