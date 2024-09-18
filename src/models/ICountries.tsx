@@ -4,11 +4,9 @@ export interface ICountries {
       common: string;
     };
   };
-
+  continents: string[];
   capital: string;
-
-  population: string;
-
+  population: number;
   flags: {
     svg: string;
   };
