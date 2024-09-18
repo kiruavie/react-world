@@ -44,12 +44,18 @@ export const Countries: React.FC = () => {
               type="radio"
               id={continent}
               name="continentRadio"
+              checked={continent === selectedRadio}
               onChange={(e) => setSelectedValue(e.target.id)}
             />
             <label htmlFor={continent}>{continent}</label>
           </li>
         ))}
       </ul>
+      {selectedRadio && (
+        <button onClick={() => setSelectedValue("")}>
+          Annuler la recherche
+        </button>
+      )}
       <ul>
         {data.countries
           .filter((country) => country.continents[0].includes(selectedRadio))
